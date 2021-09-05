@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas height="768px" width="1368px" id="myCanvas"></canvas>
+<script>
+class Rectangle{
+    constructor(_x,_y,_width, _height) {
+        this.x = _x;
+        this.y = _y;
+        this.width = _width;
+        this.height = _height;
+    }
+    getArea(){
+        return this.width*this.height;
+    }
+    getPerimeter(){
+        return (this.height+this.width)*2;
+    }
+    getCanvas(){
+let ctx = document.getElementById("myCanvas").getContext("2d");
+// let x = Math.random()*window.innerWidth;
+// let y = Math.random()*window.innerHeight;
+ctx.fillRect(this.x,this.y, this.width,this.height);
+    }
+}
+let rectangle1 = new Rectangle(500,500,40,66);
+let area = rectangle1.getArea();
+let perimeter = rectangle1.getPerimeter();
+let drawCanvas = rectangle1.getCanvas();
+alert("area is " + area + ", perimeter is " + perimeter);
+let rectangle2 = new Rectangle(0,0,80,60);
+let area2 = rectangle2.getArea();
+let perimeter2 = rectangle2.getPerimeter();
+let drawCanvas2 = rectangle2.getCanvas();
+alert("area is " + area2 + ", perimeter is " + perimeter2);
+
+
+</script>
+</body>
+</html>
