@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(_celsius) {
+            this.celsius = _celsius;
+        }
+        changeFahrenheit(){
+            return 9*this.celsius/5 + 32;
+        }
+        changeKelvin(){
+            return this.celsius+275;
+        }
+    }
+    let cDegree = new Temperature(31);
+    let fDegree = cDegree.changeFahrenheit();
+    let kDegree = cDegree.changeKelvin();
+    alert("Temperature is " + cDegree + " C and" + fDegree + " F and " + kDegree + "K");
+</script>
+</body>
+</html>
